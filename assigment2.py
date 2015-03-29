@@ -71,10 +71,9 @@ def getPDBfromProtein():
     proteinid = input('Enter protein id: ')
     result = protdict[proteinid][1]
     if len(result[0]) == 0:
-        return False
+        return ['False']
     else:
         return result
-
 
 #Question4
 def sortProtByGeneCount(): 
@@ -107,7 +106,8 @@ input('Press enter for question 2')
 print('Protein id(s) corresponding to gene:' , ' '.join(getProtIdfromGene()))
 
 input('Press enter for question 3')
-print('PDB id(s):',' '.join(getPDBfromProtein()))
+print(' '.join(getPDBfromProtein()))
+
 
 input('Press enter for question 4')
 print('Proteins sorted by gene count:')
